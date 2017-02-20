@@ -1,0 +1,5 @@
+{
+  "globalDependencies": {
+    "screeps": "github:screepers/Screeps-Typescript-Declarations/dist/screeps.d.ts#655d71b3e5022c995d1442558d3171fe53ea493b"
+  }
+}

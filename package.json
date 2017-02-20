@@ -1,0 +1,30 @@
+{
+  "name": "plexon21-screeps",
+  "version": "1.0.0",
+  "description": "Screeps scripts",
+  "main": "main.js",
+  "dependencies": {
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.12.0",
+    "eslint-plugin-react": "^6.9.0",
+    "eslint-plugin-screeps": "^1.0.1",
+    "lodash": "^3.10.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Plexon21/Screeps.git"
+  },
+  "keywords": [
+    "screeps, bob"
+  ],
+  "author": "Plexon21",
+  "license": "None",
+  "bugs": {
+    "url": "https://github.com/Plexon21/Screeps/issues"
+  },
+  "homepage": "https://github.com/Plexon21/Screeps#readme"
+}
