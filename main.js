@@ -24,20 +24,20 @@ module.exports.loop = function () {
     var builders = _.filter(Game.creeps, (creep) => creep.memory.role == 'builder');
     console.log('Builders: ' + builders.length);
     if (builders.length < 2) {
-        var newName = Game.spawns['Erebor'].createCreep([WORK, WORK, CARRY, CARRY, MOVE], undefined, { role: 'builder' });
+        var newName = Game.spawns['Erebor'].createCreep([WORK, WORK, CARRY, CARRY, CARRY, MOVE, MOVE], undefined, { role: 'builder' });
         console.log('Spawning new builder: ' + newName);
     } 
 
     var upgraders = _.filter(Game.creeps, (creep) => creep.memory.role == 'upgrader');
     console.log('Upgraders: ' + upgraders.length);
-    if (upgraders.length < 1) {
-        var newName = Game.spawns['Erebor'].createCreep([WORK, WORK, MOVE, CARRY, MOVE], undefined, { role: 'upgrader' });
+    if (upgraders.length < 3) {
+        var newName = Game.spawns['Erebor'].createCreep([WORK, WORK, MOVE, CARRY, MOVE, CARRY, CARRY, CARRY], undefined, { role: 'upgrader' });
         console.log('Spawning new upgrader: ' + newName);
     }
 
     var headbangers = _.filter(Game.creeps, (creep) => creep.memory.role == 'headbanger');
     console.log('Headbangers: ' + upgraders.length);
-    if (headbangers.length < 1) {
+    if (headbangers.length < 2) {
         var newName = Game.spawns['Erebor'].createCreep([WORK, WORK, WORK, MOVE], undefined, { role: 'headbanger' });
         console.log('Spawning new headbanger: ' + newName);
     }
