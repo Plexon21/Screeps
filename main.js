@@ -30,8 +30,8 @@ module.exports.loop = function () {
 
     var upgraders = _.filter(Game.creeps, (creep) => creep.memory.role == 'upgrader');
     console.log('Upgraders: ' + upgraders.length);
-    if (upgraders.length < 3) {
-        var newName = Game.spawns['Erebor'].createCreep([WORK, WORK, MOVE, CARRY, MOVE, CARRY, CARRY, CARRY], undefined, { role: 'upgrader' });
+    if (upgraders.length < 4) {
+        var newName = Game.spawns['Erebor'].createCreep([WORK, WORK, WORK, MOVE, MOVE, MOVE, CARRY, CARRY, CARRY, CARRY], undefined, { role: 'upgrader' });
         console.log('Spawning new upgrader: ' + newName);
     }
 
@@ -52,7 +52,7 @@ module.exports.loop = function () {
             { align: 'left', opacity: 0.8 });
     }
 
-    var tower = Game.getObjectById('TOWER_ID');
+    var tower = Game.getObjectById('58ad5ce5db34c58230f29e69');
     if (tower) {
         var closestDamagedStructure = tower.pos.findClosestByRange(FIND_STRUCTURES, {
             filter: (structure) => structure.hits < structure.hitsMax
