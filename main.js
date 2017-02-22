@@ -36,7 +36,7 @@ module.exports.loop = function () {
     }
 
     var headbangers = _.filter(Game.creeps, (creep) => creep.memory.role == 'headbanger');
-    console.log('Headbangers: ' + upgraders.length);
+    console.log('Headbangers: ' + headbangers.length);
     if (headbangers.length < 2) {
         var newName = Game.spawns['Erebor'].createCreep([WORK, WORK, WORK, MOVE], undefined, { role: 'headbanger' });
         console.log('Spawning new headbanger: ' + newName);
