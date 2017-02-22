@@ -26,12 +26,12 @@ module.exports.loop = function () {
     if (builders.length < 2) {
         var newName = Game.spawns['Erebor'].createCreep([WORK, WORK, CARRY, CARRY, CARRY, MOVE, MOVE], undefined, { role: 'builder' });
         console.log('Spawning new builder: ' + newName);
-    } 
+    }
 
     var upgraders = _.filter(Game.creeps, (creep) => creep.memory.role == 'upgrader');
     console.log('Upgraders: ' + upgraders.length);
-    if (upgraders.length < 4) {
-        var newName = Game.spawns['Erebor'].createCreep([WORK, WORK, WORK, MOVE, MOVE, MOVE, CARRY, CARRY, CARRY, CARRY], undefined, { role: 'upgrader' });
+    if (upgraders.length < 3) {
+        var newName = Game.spawns['Erebor'].createCreep([WORK, WORK, MOVE, MOVE, CARRY, CARRY, MOVE, CARRY], undefined, { role: 'upgrader' });
         console.log('Spawning new upgrader: ' + newName);
     }
 
